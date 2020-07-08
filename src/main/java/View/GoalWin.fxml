@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+
+<AnchorPane fx:id="background" prefHeight="500.0" prefWidth="700.0" style="-fx-background-image: url(images/backGround.jpeg); -fx-background-size: stretch;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.GoalWinController">
+   <children>
+      <MediaView fx:id="mediaViewer" fitHeight="400.0" fitWidth="500.0" layoutX="142.0" layoutY="22.0" />
+            <Button fx:id="back44" layoutX="303.0" layoutY="452.0" mnemonicParsing="false" onAction="#GoToMainWindow" text="You Won">
+            </Button>
+         </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import View.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#mouseClicked" onScroll="#CtrlZoom" prefHeight="500.0" prefWidth="700.0" style="-fx-background-image: url(images/backGround.jpeg);-fx-background-size: stretch;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+   <left>
+   </left>
+   <center>
+      <StackPane fx:id="mainPane" prefHeight="475.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+         <children>
+            <MazeDisplayer fx:id="mazeDisplayer" height="480.0" onKeyPressed="#MakeStep" width="700.0" BorderPane.alignment="CENTER" />
+            <MazeSolutionDisplayer fx:id="mazeSolutionDisplayer" height="480.0" width="700.0" BorderPane.alignment="CENTER" />
+            <CharacterDisplayer fx:id="characterDisplayer" height="480.0" width="700.0" BorderPane.alignment="CENTER" />
+            <Button fx:id="quickGameBtn" mnemonicParsing="false" onAction="#GenerateMaze" prefHeight="32.0" prefWidth="127.0" text="Quick Game">
+               <StackPane.margin>
+                  <Insets top="350.0" />
+               </StackPane.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </StackPane>
+   </center>
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#GenerateMaze" text="New Game" />
+                  <MenuItem fx:id="showSolution" disable="true" mnemonicParsing="false" onAction="#Solve" text="Show Solution" />
+                  <MenuItem mnemonicParsing="false" onAction="#LoadGame" text="Load" />
+                  <MenuItem fx:id="save" disable="true" mnemonicParsing="false" onAction="#SaveGame" text="Save" />
+                  <MenuItem fx:id="muteMenuItem" mnemonicParsing="false" onAction="#MuteSound" text="Mute" />
+                  <MenuItem fx:id="unMuteMenuItem" disable="true" mnemonicParsing="false" onAction="#UnMuteSound" text="Unmute" />
+                  <MenuItem mnemonicParsing="false" onAction="#SafeExit" text="Close" />
+
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Settings">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#HandleSettingsClick" text="Edit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#HandleAboutClick" text="About" />
+                  <MenuItem mnemonicParsing="false" onAction="#HandleInstructionClick" text="Instructions" />
+
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

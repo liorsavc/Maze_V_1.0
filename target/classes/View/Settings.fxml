@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="500.0" prefWidth="700.0" style="-fx-background-image: url(images/backGround.jpeg);-fx-background-size: stretch;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.SettingsController">
+   <children>
+      <ChoiceBox fx:id="algorithmChoiceBox" layoutX="218.0" layoutY="81.0" prefHeight="25.0" prefWidth="310.0" />
+
+
+      <Label layoutX="41.0" layoutY="80.0" text="Solving Algorithm:" textFill="SLATEGRAY">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Label>
+      <Label layoutX="41.0" layoutY="148.0" prefHeight="27.0" prefWidth="53.0" text="Rows :" textFill="SLATEGRAY">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Label>
+      <Label layoutX="41.0" layoutY="209.0" text="Columns :" textFill="SLATEGRAY">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="rowTF" layoutX="134.0" layoutY="149.0" prefHeight="25.0" prefWidth="394.0" />
+      <TextField fx:id="colTF" layoutX="134.0" layoutY="210.0" prefHeight="25.0" prefWidth="394.0" />
+      <Button fx:id="applyBtn" layoutX="518.0" layoutY="402.0" mnemonicParsing="false" onAction="#SetConfing" prefHeight="25.0" prefWidth="135.0" text="Apply" />
+      <Label fx:id="settingsLabel" layoutX="41.0" layoutY="20.0" text="SETTINGS">
+         <font>
+            <Font name="Cambria" size="37.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelBtn" layoutX="518.0" layoutY="442.0" mnemonicParsing="false" onAction="#GoToMainWindow" prefHeight="25.0" prefWidth="135.0" text="Cancel" />
+      <Button fx:id="muteBtn"  layoutX="633.0" layoutY="14.0" mnemonicParsing="false" onAction="#Mute" prefHeight="25.0" prefWidth="53.0" text="MUTE" />
+   </children>
+</AnchorPane>
